@@ -169,7 +169,7 @@ function deleteSkill(skillName) {
 		element => element.title.toLowerCase() === skillName.toLowerCase()
 	);
 
-	skills.splice(index);
+	skills.splice(index, 1);
 
 	regenerateSkills();
 }
