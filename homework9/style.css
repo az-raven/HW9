@@ -1,0 +1,189 @@
+body, html {
+  	font-family: "Roboto Condensed", sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	grid-area: head;
+	background-color: slateblue;
+	color: white;
+	padding: 15px;
+	height: fit-content;
+	position: sticky;
+	top: 0px;
+	z-index: 9999;
+}
+
+.nav-link {
+	background-color: slateblue;
+	padding: 15px;
+	border-radius: 15px;
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.nav-link > a {
+	color: white !important;
+	text-decoration: none;
+	text-align: center;
+}
+
+.content {
+	grid-area: content;
+	padding: 15px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.content > * {
+	flex-shrink: 1;
+	flex-grow: 1;
+}
+
+footer {
+	position: sticky;
+	bottom: 0px;
+	background-color: black;
+	color: white;
+	padding: 15px;
+	grid-area: footer;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+footer h2 {
+	margin-bottom: 0px;
+}
+
+footer a {
+	color: white;
+}
+
+footer > * {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.resume-button {
+	background-color: crimson !important;
+	transition: all ease 0.2s;
+}
+
+.resume-button:hover {
+	box-shadow: crimson 0px 0px 3px 3px;
+	transform: scale(105%);
+}
+
+.nav-link > a {
+	width: 100%;
+	height: 100%;
+}
+
+img {
+	transition: all ease 250ms;
+}
+
+img:hover {
+	transform: scale(110%);
+	box-shadow: black 0px 0px 8px 8px;
+	border: 2px solid white;
+}
+
+.nav-container {
+	grid-row: 1 / span 2;
+	grid-area: nav;
+}
+
+@media (max-width: 768px) {
+	nav.large {
+		display: none;
+	}
+
+	nav.small {
+		display: flex;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 15% 85%;
+		grid-template-areas:
+			"head head"
+			"content content"
+			"footer footer";
+		min-height: 100vh;
+	}
+}
+
+@media (min-width: 768px) {
+	nav.small {
+		display: none;
+	}
+	nav.large {
+		display: flex;
+	}
+
+	.grid-container {
+		display: grid;
+		grid-template-columns: 15% 85%;
+		grid-template-areas:
+			"nav head"
+			"nav content"
+			"footer footer";
+		min-height: 100vh;
+	}
+
+	.summary-container {
+		width: 45%;
+		margin-right: calc(15px / 2);
+		align-self: flex-start;
+	}
+
+	.skills-container {
+		width: 45%;
+		margin-left: calc(15px / 2);
+		align-self: flex-end;
+	}
+}
+
+@media (max-width: 1300px) {
+	.large {
+		display: none;
+	}
+
+	img {
+		width: 95%;
+		grid-column-end: span 3;
+	}
+
+	.grid-container p {
+		grid-column-end: span 3;
+	}
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: 100%;
+	}
+}
+
+@media (min-width: 1300px) {
+	.small {
+		display: none;
+	}
+
+	img {
+		max-width: 512px;
+	}
+
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+td {
+	min-width: 15%;
+}

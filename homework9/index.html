@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hankins, Rose - CS212 Homework 9</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<nav class="small navbar">
+	</nav>
+	<div class="grid-container">
+		<!-- header -->
+		<header class="header bg-gradient">
+			<h1 class="large"><strong>Rose Hankins</strong> • Full-Stack & Game Developer</h1>
+			<div class="small">
+				<h1><strong>Rose Hankins</strong></h1>
+				<h2>Full-Stack & Game Developer</h2>
+			</div>
+		</header>
+		<!-- sidebar -->
+		<div class="nav-container">
+			<nav class="large navbar">
+			</nav>
+		</div>
+		<!-- content -->
+		<div class="content">
+			<div class="summary-container card">
+				<div class="card-body">
+					<h2 id="summary card-title">Summary</h2>
+					<p id="greeting"></p>
+					<p class="card-text">
+						I am a software developer with 7 years of experience, primarily focused on
+						<abbr title="Virtual Reality">VR</abbr> games and backend infrastructure.
+						My previous works include several internal prototypes as well as a live-service
+						multiplayer game published on the Oculus store, SideQuest, and Itch.io.
+					</p>
+				</div>
+			</div>
+			<div class=" card">
+				<div class="card-body">
+					<h2 id="skills card-title">Skills</h2>
+					<p class="card-text">
+						I am experienced in both the <a href="https://unity.com" target="_blank">Unity</a> and
+						<a href="https://godotengine.org" target="_blank">Godot</a> game engines, as well as the
+						following languages:
+					</p>
+					<ul class="card-text" id="skill-list"></ul>
+					<p class="card-text">
+						I am also experienced in <a href="https://blender.org" target="_blank">Blender</a> for 3D art and the
+						outstanding texturing plugin <a href="https://ucupumar.github.io/ucupaint-wiki/" target="_blank">Ucupaint</a>.
+					</p>
+					<label for="add-skill-name">Add skill: </label>
+					<input type="text" name="add-skill-name" id="add-skill-name"> <br>
+					<label for="add-skill-years">Experience (years): </label>
+					<input type="number" name="add-skill-years" id="add-skill-years" value="1">
+
+					<input type="button" value="Add Skill" id="add-skill-button">
+				</div>
+			</div>
+			<div>
+				<h2 id="education">Education</h2>
+				<hr>
+				<table class="table" id="education-table">
+					<tr>
+						<th>
+							Location
+						</th>
+						<th>
+							Time Period
+						</th>
+						<th>
+							Overview
+						</th>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<h2 id="experience">Experience</h2>
+				<hr>
+				<table class="table" id="experience-table">
+					<tr>
+						<th>
+							Location
+						</th>
+						<th>
+							Time Period
+						</th>
+						<th>
+							Overview
+						</th>
+					</tr>
+				</table>
+			</div>
+			<div>
+				<h2 id="projects">Projects</h2>
+				<input type="checkbox" name="reverse-order" id="reverse-order">
+				<label for="reverse-order">Reverse Chronological Order</label>
+				<div class="project-grid" id="project-list">
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+		<footer id="contact" class="bg-gradient">
+			<div class="contact-list">
+				<h2>Contact</h2>
+				<a href="mailto:jh3994@nau.edu" target="_blank">Academic Email</a>
+				<a href="mailto:rose@subsurface.dev" target="_blank">Business Email</a>
+				<a href="mailto:bubby932@gmail.com" target="_blank">Personal Email</a>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
