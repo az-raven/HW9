@@ -409,3 +409,15 @@ $("#add-skill-name").on('keydown', event => {
 	}
 });
 
+$("#add-skill-years").on('keydown', event => {
+	switch (event.which) {
+		case 13: // Enter
+			$("#add-skill-button").click();
+			break;
+		case 27: // Escape
+			$("#add-skill-name").val("");
+			$("#add-skill-years").val(1);
+			break;
+	}
+});
+
